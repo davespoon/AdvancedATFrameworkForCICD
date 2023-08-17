@@ -17,4 +17,4 @@ jobs:
     - name: Runnign the script file
       run: |
         echo -- Running Tests --
-        sh./scripts/Run.sh
+        sh ./scripts/Run.sh
