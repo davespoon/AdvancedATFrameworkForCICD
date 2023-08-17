@@ -3,7 +3,7 @@
 set -e
 set -x
 
-project="e2etest
+project="e2etest"
 
 cd "$(dirname "${0}")/.."
 
