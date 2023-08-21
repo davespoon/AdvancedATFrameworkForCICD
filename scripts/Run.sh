@@ -12,13 +12,13 @@ export COMPOSE_HTTP_TIMEOUT=200
 
 docker-compose -p "$project" build
 
-docker-compose -p "$project" up ea_api ea_webapp db selenium-hub firefox chrome
+docker-compose -p "$project" up -d ea_api ea_webapp db selenium-hub firefox chrome
 
 docker-compose -p "$project" up --no-deps ea_test
 
 exit_code=$(docker inspect ea_test -f '{{ .State.ExitCode }}')
 
-if [$exit_code -eq 0]; then
+if [ $exit_code -eq 0 ]; then
 	exit $exit_code
 else
 	echo "Test Failed"
