@@ -13,4 +13,4 @@ until [ ]; do
 	curl -f "http://selenium-hub:4444/wd/hub/status" && break
 done
 
-dotnet test --logger "console;verbosity-detailed"
+dotnet test --logger "console;verbosity=detailed"
